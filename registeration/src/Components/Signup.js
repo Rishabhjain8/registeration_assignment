@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     const [credentials, setCredentials] = useState({name: "",email: "", password: "", cpassword: ""});
@@ -76,6 +77,7 @@ const SignUp = () => {
                 </div>
                 <button type="submit" className="btn btn-primary">Create Account</button>
             </form>
+            <h4 className='mt-4'>Have an account ? <Link to='/login'>Login</Link></h4>
             <ToastContainer/>
         </div>
     )
