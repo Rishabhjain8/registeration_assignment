@@ -8,12 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-      if(localStorage.getItem('token')){
-          <Route exact path = "/" element={<Home/>} />
-        }
-        else{
-          <Route exact path = "/login" element={<Login/>} />
-        }
+      {localStorage.getItem('token') ? <Route exact path = "/" element={<Home/>} />:<Route exact path = "/login" element={<Login/>} />}
         <Route exact path = "/login" element={<Login/>} />
       <Route exact path = "/signup" element={<SignUp/>}/>
       </Routes>
